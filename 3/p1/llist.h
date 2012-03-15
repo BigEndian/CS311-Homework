@@ -29,7 +29,7 @@ struct Node
 
 class llist
 {
- private:
+ protected:
   
   Node *Front;       // front  pointer 
   Node *Rear;        // rear   pointer
