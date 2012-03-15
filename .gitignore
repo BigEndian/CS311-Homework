@@ -1,0 +1,6 @@
+*.swp
+.*.*.swp
+*.tar.gz
+*.tar.bz2
+*.zip
+*.txt
