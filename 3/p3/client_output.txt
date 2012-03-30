@@ -1,0 +1,18 @@
+Script started on Fri 30 Mar 2012 12:34:01 AM PDT
+~/prog/cs311/3/p3 g++ --pedantic-error -Wall -Werror client.cpp llist.cpp slist.cpp -o client
+~/prog/cs311/3/p3 ./client
+Creating a list L1 with the elements of 1 2 3 4 5
+Passing L1 to CopyTest
+CopyTest display: 1 2 3 4 5 6 
+Displaying L1 after passing it to CopyTest
+L1: 1 2 3 4 5 
+Creating a list L2 with the elements of 4 3 2 1
+Displaying L2: 4 3 2 1 
+Setting L2 to L1
+Displaying L2: 1 2 3 4 5 
+Removing the first element of L1
+Displaying L1: 2 3 4 5 
+Displaying L2: 1 2 3 4 5 
+~/prog/cs311/3/p3 
+
+Script done on Fri 30 Mar 2012 12:34:22 AM PDT

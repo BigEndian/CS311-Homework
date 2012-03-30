@@ -1,0 +1,42 @@
+Script started on Fri 30 Mar 2012 12:35:57 AM PDT
+~/prog/cs311/3/p3 g++ --pedantic-error -Wall -Werror -client_equality.cpp llist.cpp slist.cpp -o client_equality
+~/prog/cs311/3/p3 ./client_equality
+Generated List #1: 91 92 0 18 3 41 37 30
+Generated List #2: [ empty ]
+Generated List #3: 9 58 13 76 9 28 9 50 28 
+Generated List #4: 46 71 
+Generated List #5: 84 25 53 28 76 41 
+Generated List #6: 75 65 89 50 76 53 89 94
+Generated List #7: 84 25 53 28 76 41
+Generated List #8: [ empty ]
+List #1 is not equal List #2
+List #1 is not equal List #3
+List #1 is not equal List #4
+List #1 is not equal List #5
+List #1 is not equal List #6
+List #1 is not equal List #7
+List #1 is not equal List #8
+List #2 is not equal List #3
+List #2 is not equal List #4
+List #2 is not equal List #5
+List #2 is not equal List #6
+List #2 is not equal List #7
+List #2 is equal to List #8
+List #3 is not equal List #4
+List #3 is not equal List #5
+List #3 is not equal List #6
+List #3 is not equal List #7
+List #3 is not equal List #8
+List #4 is not equal List #5
+List #4 is not equal List #6
+List #4 is not equal List #7
+List #4 is not equal List #8
+List #5 is not equal List #6
+List #5 is equal to List #7
+List #5 is not equal List #8
+List #6 is not equal List #7
+List #6 is not equal List #8
+List #7 is not equal List #8
+~/prog/cs311/3/p3 
+
+Script done on Fri 30 Mar 2012 12:36:28 AM PDT
