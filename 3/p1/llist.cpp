@@ -1,10 +1,10 @@
 // Name: Eric Carr
-// HW: HW3P1
+// HW: HW3P1 (used in 2 and 3 as well)
 // Compiler: g++ --pedantic-error -Wall -Werror llist.cpp client.cpp -o client
 // Linked List Implementation
 
-#include "llist.h"
 #include <iostream>
+#include "llist.h"
 using namespace std;
 
 // Purpose: Instantiate the linked list
@@ -99,6 +99,11 @@ void llist::addRear(el_t NewNum)
       // Set Front AND Rear to the address of the newly created node
       Front = Rear = addition;
    }
+   else if (Count == 1)
+   {
+      Front->Next = addition;
+      Rear = addition;
+   }
    else
    {
       // Otherwise, just set Rear's next to the new node, and set Rear to addition, as it becomes the new Rear
@@ -164,6 +169,8 @@ void llist::deleteRear(el_t& OldNum)
    }
    else
    {
+      // Clang static analyzer claims null pointers here,
+      // But that is because it's unable to infer that, when Count is not 0, Front is not null (assuming my code is correct)
       // Iterate to the node just prior to Rear
       Node *current = Front;
       while (current && current->Next != Rear) // Iterate to the Node prior to Rear
@@ -206,6 +213,8 @@ void llist::deleteIth(int I, el_t& OldNum)
       {
          antecedent = antecedent->Next;
       }
+      // Clang static analyzer claims null pointers here,
+      // But that is because it's unable to infer that, when Count is not 0, Front is not null (assuming my code is correct)
       Node *ith = antecedent->Next;
       OldNum = ith->Elem;
       antecedent->Next = ith->Next;
@@ -242,6 +251,9 @@ void llist::addbeforeIth(int I, el_t newNum)
       {
          antecedent = antecedent->Next;
       }
+      // Clang static analyzer claims null pointers here,
+      // But that is because it's unable to infer that, when Count is not 0, Front is not null (assuming my code is correct)
+
       Node *newNode = new Node;
       newNode->Elem = newNum;
       newNode->Next = antecedent->Next;

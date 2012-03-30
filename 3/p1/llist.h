@@ -6,7 +6,7 @@
 //****************************************************************************
 
 // Your name: Eric Carr
-// HW: HW3P1
+// HW: HW3P1 (used in 2 and 3 as well)
 // Compiler: g++ --pedantic-error -Wall -Werror llist.cpp client.cpp -o client
 // Linked List Interface
 

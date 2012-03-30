@@ -1,7 +1,7 @@
 // Name: Eric Carr
-// HW: HW3P2
+// HW: HW3P2 (as well as HW3P3)
 // Compiler: g++ --pedantic-error -Werror -Wall -o client llist.cpp slist.cpp client.cpp
-// Searchable Linked List Interface
+// Searchable Linked List Interface with a copy constructor and equality testing through the == operator
 #include "llist.h"
 
 class slist : public llist
@@ -10,10 +10,14 @@ class slist : public llist
       // Purpose: to construct the list; it only needs to call the parent constructor
       // How to call: called implicitly, e.g. slist s;
       slist() : llist() {};
+      slist(const slist&);
       // Purpose: to deallocate memory allocated by the list. llist.~llist is called implicitly
-      // How to call: implicitly called whene an slist falls out of scope, or when using delete on a dynamically allocated slist (i.e. slist *s = new slit; delete s;)
-      ~slist() { };
-      
+      // How to call: implicitly called when an slist falls out of scope, or when using delete on a dynamically allocated slist (i.e. slist *s = new slit; delete s;)
+      ~slist() {};
+
+      slist& operator=(const slist&);
+      friend bool operator==(const slist&, const slist&);
+      friend bool operator!=(const slist&, const slist&);
 
       // Purpose: To find an element in the linked list. key is the element to search for
       // How to call: slist s; s.addFront(0); s.addFront(3); s.search(2) // => 0
