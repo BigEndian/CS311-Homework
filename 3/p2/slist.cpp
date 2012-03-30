@@ -2,7 +2,6 @@
 // HW: HW3P2 (As well as Part 3 now)
 // Compiler: g++ --pedantic-error -W{error,all} -o client llist.cpp slist.cpp client.cpp
 // Searchable Linked List Implementation with a copy constructor and equality testing
-#include <assert.h>
 #include "slist.h"
 
 // non-member functions
@@ -54,7 +53,6 @@ slist& slist::operator =(const slist& other)
       {
          this->deleteRear(foo);
       }
-      assert(((Rear == Front) && (Front == NULL)) && (Count == 0));
       Node *lCurr = NULL, *lPrior = NULL;
       Node *rCurr = other.Front;
 
