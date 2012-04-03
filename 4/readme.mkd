@@ -1,2 +1,3 @@
-This project was not added as it had a great deal of someone else's code used as the base
+This project was not added as it had a great deal of someone else's code used as the base  
+  
 *To disambiguate*, code provided as part of the assignment
